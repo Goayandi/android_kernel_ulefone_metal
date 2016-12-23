@@ -1,15 +1,16 @@
-#$(call all-subdir-src-or-makefile)
-# workaround when building out of MTK build chain
+# Workaround when building out of MTK build chain
 export LYCONFIG_COMB_CHARGER_IC = MTK_SM5414_SUPPORT
-export LYCONFIG_EXCHANGE_BACK_FRONT_CAMERA_SUPPORT=yes
-export LYCONFIG_DUAL_CAMERA_BOTH_WORK_SUPPORT=yes
-export LYCONFIG_DUAL_CAMERA_USE_VCAMA_SUPPORT=yes
+export LYCONFIG_EXCHANGE_BACK_FRONT_CAMERA_SUPPORT = yes
+export LYCONFIG_DUAL_CAMERA_BOTH_WORK_SUPPORT = yes
+export LYCONFIG_DUAL_CAMERA_USE_VCAMA_SUPPORT = yes
 export LYCONFIG_GPIO_FLASHLIGHT_SUPPORT = yes
-export LYCONFIG_COMB_SPEAKER_SUPPORT　=　CLASS_D
-export LYCONFIG_DETECT_HW_INFO_SUPPORT=yes
-export LYCONFIG_COMB_FINGERPRINT_SUPPORT=ET310
-export LYCONFIG_MTK_FLIP_HALL_SUPPORT=yes
+export LYCONFIG_COMB_SPEAKER_SUPPORT = CLASS_D
+export LYCONFIG_DETECT_HW_INFO_SUPPORT = yes
+export LYCONFIG_COMB_FINGERPRINT_SUPPORT = ET310
+export LYCONFIG_MTK_FLIP_HALL_SUPPORT = yes
+export CUSTOM_HAL_LENS = fm50af_f1c_gq sensordrive dw9714af_f5b_gq dummy_lens
 
+#$(call all-subdir-src-or-makefile)
 MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
 subdir-ccflags-y += -Werror
 subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/hibcore
