@@ -1,5 +1,5 @@
 #!/bin/bash
-DEFCONFIG=cm_metal_defconfig
+DEFCONFIG=lineage_metal_defconfig
 KERNEL=DarkSense
 TOOLSDIR=tools/tools
 if [  -f $KERNEL ]; then
